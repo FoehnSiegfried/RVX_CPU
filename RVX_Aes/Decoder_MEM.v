@@ -20,5 +20,5 @@ assign dmWR = isOP_S;
 assign cptOp = funct3;
 
 assign memOpOut = {cptOp, dmWR, workEn};
-    
+
 endmodule

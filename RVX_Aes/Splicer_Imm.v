@@ -25,7 +25,7 @@ always @(*) begin
     `OP_I, `OP_IL, `OP_IJ, `OP_IE : immOut <= imm_i;
     `OP_S : immOut <= imm_s;
     `OP_B : immOut <= imm_b;
-    `OP_U : immOut <= imm_u;
+    `OP_U, `OP_UA : immOut <= imm_u;
     `OP_J : immOut <= imm_j;
     default : immOut <= {`BUS_W{1'b0}};
     endcase

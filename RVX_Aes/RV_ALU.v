@@ -28,8 +28,8 @@ always @(*) begin
     SLL: aluOut = srcA << srcB[4:0];
     SRL: aluOut = srcA >> srcB[4:0];
     SRA: aluOut = $signed(srcA) >>> srcB[4:0];
-    SLT: aluOut = ($signed(srcA) < $signed(srcB)) ? 1 : 0;
-    SLTU:aluOut = (srcA < srcB) ? 1 : 0;
+    SLT: aluOut = ($signed(srcA) < $signed(srcB));
+    SLTU:aluOut = (srcA < srcB);
     default: aluOut = {`BUS_W{1'b0}};
     endcase
 end
